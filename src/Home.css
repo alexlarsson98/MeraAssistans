@@ -1,0 +1,44 @@
+.header-container {
+    position: relative;
+    text-align: center;
+    color: #012e55;
+    margin-top: -120px;
+  }
+  
+  .header-image {
+    width: 100%;
+    display: block; /* Remove space under the image */
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start (left) */
+    /* padding-left: 200px; Add some padding to the left */
+    /* background: rgba(0, 0, 0, 0.5); Dark overlay with 50% opacity */
+    margin-top: -100px;
+  }
+
+  .header-content p {
+    font-size: 3vw;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .header-content h3 {
+    font-size: 4vw;
+    font-family: 'Dancing Script', cursive;
+    padding-left: 150px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content h3 {
+      padding-top: 140px;
+      padding-left: 50px;
+    }
+  }

@@ -1,0 +1,189 @@
+.navbar {
+  background: transparent;
+  color: white;
+  min-height: 120px; /* Adjust the navbar height */
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Add padding to ensure content isn't too close to the screen edges */
+  transition: background-color 0.3s;
+}
+
+.navbar img {
+  position: absolute;
+  left: 20px; /* Adjust the left position for mobile */
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  max-height: 70px; /* Logo max height */
+  max-width: 100%; /* Ensures the image is never bigger than its container */
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.links a {
+  color: #012e55;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  padding: 10px 15px; /* Adjust padding for touch targets */
+  margin: 0 10px; /* Adjust margins for spacing */
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+  font-weight: bold;
+}
+
+.navbar:hover {
+  background-color: white;
+}
+
+.links a:hover, .navbar:hover .links a {
+  color: #012e55;
+  background-color: transparent;
+}
+
+.links a:hover {
+  background-color: #012e55;
+  color: #012e55;
+}
+
+/* Add styles for an underline bar */
+.links a::after {
+  content: '';
+  display: block;
+  height: 3px; /* Thickness of the underline */
+  width: 0;
+  background-color: #012e55; /* Color of the underline */
+  transition: width 0.3s;
+  margin-top: 5px; /* Distance from the text */
+}
+
+.links a:hover::after, .links a.active::after {
+  width: 100%;
+}
+
+.links a.active {
+  color: #012e55; /* Color of the text for the active link */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Distribute space between logo and links */
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .navbar img {
+    left: 10px; /* Adjust logo position */
+    height: 50px; /* Adjust logo size */
+  }
+
+  .links {
+    order: 1; /* Force the links to be at the bottom */
+    width: 100%; /* Take full width of the navbar */
+    justify-content: space-around; /* Distribute links evenly */
+    margin-top: 10px; /* Add some space above the links */
+  }
+
+  .links a {
+    font-size: 1em; /* Adjust font size for smaller screens */
+    padding: 8px 10px; /* Adjust padding */
+    margin: 0 5px; /* Adjust margins */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar img {
+    left: 50%; /* Center logo on smaller screens */
+    transform: translateX(-50%) translateY(-50%); /* Adjust translate to center logo */
+  }
+}
+
+.navbar.scrolled {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.navbar:not(.scrolled):hover {
+  background-color: white;
+}
+
+.navbar.transparent {
+  background: transparent;
+}
+
+.navbar.solid {
+  background-color: white;
+}
+
+.navbar.transparent:hover {
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  margin-right: 50px;
+  transition: transform 0.3s;
+}
+
+.hamburger.open div:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.open div:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.hamburger div {
+  height: 4px;
+  background-color: #012e55;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    transition: all 0.3s ease-in;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links a {
+    color: #012e55;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -47,8 +47,10 @@ const Navbar = () => {
       </div>
       <div className={`links ${menuOpen ? 'open' : ''}`}>
         <Link to="/" className={isActive('/') ? 'active' : ''} onClick={closeMenu}>Hem</Link>
-        <Link to="/vart-erbjudande" className={isActive('/vart-erbjudande') ? 'active' : ''} onClick={closeMenu}>Vårt erbjudande</Link>
         <Link to="/om-oss" className={isActive('/om-oss') ? 'active' : ''} onClick={closeMenu}>Om oss</Link>
+        <Link to="/att-vara-kund" className={isActive('/att-vara-kund') ? 'active' : ''} onClick={closeMenu}>Att vara kund</Link>
+        <Link to="/att-bli-kund" className={isActive('/att-bli-kund') ? 'active' : ''} onClick={closeMenu}>Att bli kund</Link>
+        <Link to="/personlig-assistent" className={isActive('/personlig-assistent') ? 'active' : ''} onClick={closeMenu}>Personlig assistent</Link>
         <Link to="/kontakt" className={isActive('/kontakt') ? 'active' : ''} onClick={closeMenu}>Kontakt</Link>
       </div>
     </nav>

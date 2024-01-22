@@ -3,6 +3,7 @@
     text-align: center;
     color: #012e55;
     margin-top: -120px;
+    margin-bottom: 0;
   }
   
   .header-image {
@@ -42,3 +43,65 @@
       padding-left: 50px;
     }
   }
+
+  .container {
+    display: flex;
+    justify-content: center; /* Center the items on the main axis */
+    align-items: center; /* Center the items on the cross axis */
+    text-align: left; /* Align text to the left */
+    height: auto;
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-top: 120px; /* Decrease the top margin if needed */
+    margin-bottom: 120px; /* Decrease the bottom margin if needed */
+  }
+  
+  .image-container {
+    flex: 1; /* Take up 1 portion of the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text-container {
+    flex: 1; /* Take up 1 portion of the available space */
+    max-width: 600px; /* Maximum width of the text container */
+    margin-left: 20px; /* Add some space between the image and the text */
+  }
+  .text-container h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #012e55; /* Blue color for <h3> */
+    font-size: 28px;
+  }
+  .text-container h4 {
+    color: #012e55;
+    margin-bottom: 5px;
+  }
+  
+  .text-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #012e55; /* Blue color for paragraphs */
+    line-height: 1.6; /* Adjust the space between text rows */
+    margin-top: 0px;
+  }
+
+  /* Initial state of the containers */
+.container .image-container,
+.container .text-container {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.container .image-container.slide-in,
+.container .text-container.slide-in {
+  transform: translateX(0px);
+  opacity: 1;
+}

@@ -1,4 +1,6 @@
 .App {
     padding-top: 120px; /* This should be equal to or more than the height of your navbar */
   }
-  
+  h3, p {
+    font-family: 'Open Sans', sans-serif;
+  }

@@ -5,29 +5,36 @@
     width: auto;
   }
   
-  .image-container {
+  .image-container-to-be-customer {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative; /* Added for positioning children absolutely */
   }
   
-  .image-container h3 {
+  .image-container-to-be-customer h3 {
     position: absolute;
     left: 15%; /* Adjust as needed for center-left alignment */
-    top: 35%;  /* Center vertically */
+    top: 50%;  /* Center vertically */
     transform: translateY(-50%); /* Adjust vertical centering */
     color: white; /* Optional: change color if needed */
     font-size: 70px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   
-  .image-container p {
+  .image-container-to-be-customer p {
     position: absolute;
     left: 15%; /* Adjust as needed for center-left alignment */
-    top: 60%;  /* Center vertically */
+    top: 77%;  /* Center vertically */
     transform: translateY(-50%); /* Adjust vertical centering */
     color: white; /* Optional: change color if needed */
     font-size: 30px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    padding: 10px;
+    padding-top: 0px;
   }
 
   .about-container {

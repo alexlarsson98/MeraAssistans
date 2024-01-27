@@ -1,12 +1,12 @@
 import React from 'react';
-import cap from './keps_mera.jpg';
+import group from './group_mera.jpg';
 import './ToBeCustomer.css';
 
 const ToBeCustomer = () => {
   return (
     <div>
-      <div className="image-container">
-        <img src={cap} alt="cap" className="header-img" />
+      <div className="image-container-to-be-customer">
+        <img src={group} alt="group" className="header-img" />
         <h3>Att vara kund</h3>
         <p>Tillsammans gör vi skillnad</p>
       </div>

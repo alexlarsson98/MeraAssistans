@@ -1,12 +1,12 @@
 import React from 'react';
-import cap from './keps_mera.jpg';
+import hug_full from './hug_mera_full.jpg';
 import './Career.css';
 
 const Career = () => {
   return (
     <div>
       <div className="image-container">
-        <img src={cap} alt="cap" className="header-img" />
+        <img src={hug_full} alt="hug_full" className="header-img" />
         <h3>Jobba hos oss</h3>
         <p>Att arbeta som personlig assistent</p>
       </div>

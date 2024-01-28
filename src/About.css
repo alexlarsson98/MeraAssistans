@@ -1,55 +1,136 @@
 .header-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 450px;
-    width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  width: auto;
+}
+
+.p {
+  color: #012e55;
+}
+
+.h3 {
+  color: #012e55;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-container h3 {
+  position: absolute;
+  left: 15%;
+  top: 35%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 70px;
+}
+
+.image-container p {
+  position: absolute;
+  left: 15%;
+  top: 60%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 30px;
+}
+
+.about-container-flex {
+  display: flex; /* Use Flexbox for this container */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Align items vertically */
+  padding-top: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.about-container-flex .text-container {
+  flex: 1; /* Take up the available space */
+  margin-right: 20px; /* Add some space between text and image */
+}
+
+.about-container-flex .image-container {
+  flex: 1; /* Allow the image container to grow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container {
+  flex: 1; /* Take up the available space */
+  margin-right: 20px; /* Add some space between text and image */
+}
+
+.about-container-s p, .about-container-flex .text-container p {
+  font-family: 'Open Sans', sans-serif; /* Specify the font family */
+  color: #012e55; /* Font color */
+  font-size: 18px; /* Font size for desktop view */
+  font-weight: lighter; /* Font weight */
+  line-height: 1.6; /* Line height */
+  margin-top: 0; /* Top margin */
+}
+
+.about-container-s h3{
+  color: #012e55; /* Font color */
+}
+
+.about-container-flex, .about-container-s {
+  padding-top: 50px;
+  padding-left: 250px; /* This should match between the two containers */
+  padding-right: 250px; /* This should match between the two containers */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-container-flex {
+    flex-direction: column;
+    padding-left: 20px; /* This should match for mobile */
+    padding-right: 20px; /* This should match for mobile */
+    padding-top: 30px; /* Adjust top padding if necessary */
   }
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Added for positioning children absolutely */
+
+  .about-container-s {
+    flex-direction: column;
+    padding-left: 40px; /* This should match for mobile */
+    padding-right: 40px; /* This should match for mobile */
+    padding-top: 30px; /* Adjust top padding if necessary */
   }
-  
+
   .image-container h3 {
-    position: absolute;
-    left: 15%; /* Adjust as needed for center-left alignment */
-    top: 35%;  /* Center vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    color: white; /* Optional: change color if needed */
-    font-size: 70px;
+    margin-top: -10px;
+    font-size: 35px; /* Smaller font size */
+    left: 10%; /* Adjust left alignment */
   }
-  
+
   .image-container p {
-    position: absolute;
-    left: 15%; /* Adjust as needed for center-left alignment */
-    top: 60%;  /* Center vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    color: white; /* Optional: change color if needed */
-    font-size: 30px;
+    font-size: 20px; /* Smaller font size */
+    left: 10%; /* Adjust left alignment */
   }
 
-  .about-container {
-    padding-top: 50px;
-    padding-left: 250px;
-    padding-right: 250px;
+  .about-container-s h4 {
+    font-size: 25px;
   }
 
-  .about-container p {
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    color: #012e55; /* Blue color for paragraphs */
-    line-height: 1.6; /* Adjust the space between text rows */
-    margin-top: 0px;
+  .about-container-s p {
+    font-size: 16px; /* Smaller font size */
   }
-  
-  .about-container h4 {
-    font-size: 30px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color: #012e55; /* Blue color for paragraphs */
-    line-height: 1.6; /* Adjust the space between text rows */
-    margin-top: 0px;
+
+  .text-container {
+    margin-right: 0; /* Reset margin on small screens */
   }
+
+  .about-container-flex {
+    flex-direction: column; /* Stack items on small screens */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-container-flex .text-container .about-container {
+    margin-right: 0; /* Reset margin on small screens */
+  }
+}

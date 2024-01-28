@@ -7,8 +7,8 @@ const Contact = () => {
     <div>
       <div className="image-container">
         <img src={office} alt="office" className="header-img" />
-        <h3>Att bli kund</h3>
-        <p>Efter den inledande kontakten så bokar vi ett personligt möte</p>
+        <h3>Kontakta oss</h3>
+        <p>Har du några frågor så tveka inte höra av dig</p>
       </div>
     </div>
   );

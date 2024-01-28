@@ -58,34 +58,6 @@
   flex-direction: row-reverse; /* Image on the right for the second container */
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 3vw;
-    padding-right: 3vw;
-  }
-
-  .container .image-container,
-  .container .text-container {
-    order: 0; /* Reset the order */
-  }
-
-  .container .image-container {
-    order: 2; /* Image will be below the text */
-    margin-top: 20px; /* Space above the image */
-  }
-
-  .container .text-container {
-    order: 1; /* Text will be on top */
-  }
-
-  .image-container, .text-container {
-    margin: 10px 0;
-  }
-}
-
 .image-container {
   flex: 1;
   display: flex;
@@ -135,7 +107,7 @@
 .container .text-container {
   transform: translateX(-50px);
   opacity: 0;
-  transition: all 1.5s ease-out;
+  transition: all 1.2s ease-out;
 }
 
 .container .image-container.slide-in,
@@ -144,7 +116,7 @@
   opacity: 1;
 }
 
-.header-content .button-link {
+.button-link {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.5);
@@ -162,8 +134,62 @@
   border: 1px solid #012e55;
 }
 
-.header-content .button-link:hover {
+.button-link:hover {
   background-color: #012e55;
   color: white;
   border: 1px solid white;
+}
+
+.text-container .button-link {
+  margin-left: -200px;
+}
+
+.container:last-of-type {
+  margin-left: 550px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: 0px;
+  }
+
+  .container:first-of-type,
+  .container:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .container .image-container,
+  .container .text-container {
+    order: 0; /* Reset the order */
+  }
+
+  .container .image-container {
+    order: 2; /* Image will be below the text */
+    margin-top: 0px; /* Space above the image */
+  }
+
+  .container .text-container {
+    order: 1; /* Text will be on top */
+  }
+
+  .image-container, .text-container {
+    margin: 10px 0;
+  }
+
+  .text-container .button-link {
+    margin-left: 0px;
+    font-size: 20px;
+    padding: 15px 35px;
+  }
+
+  .header-content .button-link {
+    margin-left: 50px;
+    font-size: 20px;
+    padding: 15px 35px;
+  }
 }

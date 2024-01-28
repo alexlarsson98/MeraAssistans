@@ -47,7 +47,7 @@ const Home = () => {
       <img src={currentHeaderImage} alt="Header" className="header-image" />
         <div className="header-content">
           <h3>Personlig assistans för<br></br>personliga människor</h3>
-          <Link to="/att-bli-kund" className="button-link">Bli kund!</Link>
+          <Link to="/att-bli-kund" className="button-link">Ansök om assistans!</Link>
         </div>
       </div>
       <div className="container">
@@ -79,6 +79,14 @@ const Home = () => {
         </div>
         <div className="image-container">
           <img src={fountain} alt="fountain" />
+        </div>
+      </div>
+      <div className="container">
+        <div className="text-container">
+          <h3>Har du några frågor?</h3>
+        </div>
+        <div className="text-container">
+          <Link to="/kontakt" className="button-link">Kontakta oss!</Link>
         </div>
       </div>
     </div>

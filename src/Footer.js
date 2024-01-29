@@ -19,8 +19,10 @@ const Footer = () => {
         <div className="footer-section">
           <p>Mera Assistans</p>
           <FooterLink to="/">Hem</FooterLink>
-          <FooterLink to="/vart-erbjudande">Vårt erbjudande</FooterLink>
           <FooterLink to="/om-oss">Om oss</FooterLink>
+          <FooterLink to="/att-vara-kund">Att vara kund</FooterLink>
+          <FooterLink to="/att-bli-kund">Att bli kund</FooterLink>
+          <FooterLink to="/jobba-hos-oss">Jobba hos oss</FooterLink>
           <FooterLink to="/kontakt">Kontakt</FooterLink>
         </div>
         <div className="footer-section">

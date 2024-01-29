@@ -8,7 +8,7 @@ const ToBeCustomer = () => {
       <div className="image-container-to-be-customer">
         <img src={group} alt="group" className="header-img" />
         <h3>Att vara kund</h3>
-        <p>Tillsammans gör vi skillnad</p>
+        <p>Tillsammans gör vi skillnad!</p>
       </div>
       <div className="about-container-s">
         <p>Det är inte alltid så lätt att få assistansen att fungera bra. Det är många detaljer som är viktiga. Assistenterna är olika. Någon lägger ner sin själ i arbetet, någon vill att tiden ska gå så fort som möjligt, någon vill gärna bestämma allt, även över dig och ditt liv ibland. Andra är mycket känsliga och har ett stort mått av empati. Du behöver kanske någon att diskutera din egen roll med. Ofta uppstår i vardagssituationer sådant som man måste fundera över. Du behöver då ett så bra stöd som möjligt så du får kontroll över så många situationer och detaljer som möjligt. För att uppnå detta behöver du ha regelbunden kontakt med din assistansanordnare för att se till att allt fungerar - utifrån din unika situation och dina önskemål.</p>

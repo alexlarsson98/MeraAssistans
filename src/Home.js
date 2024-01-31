@@ -8,6 +8,7 @@ import './Home.css';
 
 const Home = () => {
   const [currentHeaderImage, setCurrentHeaderImage] = useState(header);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) { // 768px is a common breakpoint for mobile devices

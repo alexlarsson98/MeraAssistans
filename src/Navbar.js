@@ -13,14 +13,19 @@ const Navbar = () => {
       setIsTop(window.scrollY < 50); // 50 is a threshold, adjust as needed
     };
 
-    // Set up the event listener
+    // Set up the scroll event listener
     window.addEventListener('scroll', onScroll);
 
-    // Clean up the event listener
+    // Clean up the scroll event listener
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
   }, []);
+
+  useEffect(() => {
+    // Scroll to top whenever the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -34,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isTop && isHomePage ? 'transparent' : 'solid'}`}>
-      <Link to="/" className="logo-link">
+      <Link to="/" className="logo-link" onClick={closeMenu}>
         <img src={logo} alt="Company Logo" />
       </Link>
       <div

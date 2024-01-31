@@ -1,55 +1,55 @@
+/* Updated CSS */
 .header-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 450px;
-    width: auto;
-  }
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Added for positioning children absolutely */
-  }
-  
-  .image-container h3 {
-    position: absolute;
-    left: 15%; /* Adjust as needed for center-left alignment */
-    top: 35%;  /* Center vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    color: white; /* Optional: change color if needed */
-    font-size: 70px;
-  }
-  
-  .image-container p {
-    position: absolute;
-    left: 15%; /* Adjust as needed for center-left alignment */
-    top: 60%;  /* Center vertically */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    color: white; /* Optional: change color if needed */
-    font-size: 30px;
-  }
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  width: auto;
+}
 
-  .about-container {
-    padding-top: 50px;
-    padding-left: 250px;
-    padding-right: 250px;
-  }
+.image-container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-  .about-container p {
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    color: #012e55; /* Blue color for paragraphs */
-    line-height: 1.6; /* Adjust the space between text rows */
-    margin-top: 0px;
-  }
-  
-  .about-container h4 {
-    font-size: 30px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color: #012e55; /* Blue color for paragraphs */
-    line-height: 1.6; /* Adjust the space between text rows */
-    margin-top: 0px;
-  }
+.image-container-contact h3 {
+  transform: translateY(-50%);
+  color: #012e55;
+  font-size: 60px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.image-container-contact p {
+  transform: translateY(-50%);
+  color: #012e55;
+  font-size: 30px;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.contact-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #012e55; /* Color for icons and text */
+}
+
+.contact-contact span {
+  padding-left: 10px;
+  font-size: 20px;
+}

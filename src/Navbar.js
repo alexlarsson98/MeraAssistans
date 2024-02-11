@@ -7,6 +7,22 @@ const Navbar = () => {
   const [isTop, setIsTop] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const [subscriptionActive, setSubscriptionActive] = useState(true);
+
+  useEffect(() => {
+    const checkSubscriptionStatus = async () => {
+      try {
+        const response = await fetch('https://awd-backend.azurewebsites.net/subscription/status?customerCode=mera_assistans');
+        const data = await response.json();
+        setSubscriptionActive(data.isActive);
+      } catch (error) {
+        console.error('Failed to fetch subscription status', error);
+        setSubscriptionActive(true);
+      }
+    };
+
+    checkSubscriptionStatus();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -36,6 +52,10 @@ const Navbar = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  if (!subscriptionActive) {
+    return <div style={{ width: '100vw', height: '100vh', backgroundColor: 'white' }}></div>;
+  }
 
   return (
     <nav className={`navbar ${isTop && isHomePage ? 'transparent' : 'solid'}`}>

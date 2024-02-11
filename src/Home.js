@@ -7,7 +7,23 @@ import fountain from './mera_vattenfall - Copy.jpg';
 import './Home.css';
 
 const Home = () => {
+  const [isActive, setIsActive] = useState(true);
   const [currentHeaderImage, setCurrentHeaderImage] = useState(header);
+
+  useEffect(() => {
+    const checkSubscriptionStatus = async () => {
+      try {
+        const response = await fetch('https://awd-backend.azurewebsites.net/subscription/status?customerCode=mera_assistans');
+        const data = await response.json();
+        setIsActive(data.isActive);
+      } catch (error) {
+        console.error('Failed to fetch subscription status', error);
+        setIsActive(true);
+      }
+    };
+
+    checkSubscriptionStatus();
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,6 +57,10 @@ const Home = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  if (!isActive) {
+    return <div style={{ width: '100vw', height: '100vh', backgroundColor: 'white' }}></div>;
+  }
 
   return (
     <div>

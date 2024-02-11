@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './meraassistans_logo_original-removebg-preview.png';
 import './Footer.css';
@@ -10,6 +10,27 @@ const FooterLink = ({ to, children }) => (
 );
 
 const Footer = () => {
+  const [isActive, setIsActive] = useState(true);
+
+  useEffect(() => {
+    const checkSubscriptionStatus = async () => {
+      try {
+        const response = await fetch('https://awd-backend.azurewebsites.net/subscription/status?customerCode=mera_assistans');
+        const data = await response.json();
+        setIsActive(data.isActive);
+      } catch (error) {
+        console.error('Failed to fetch subscription status', error);
+        setIsActive(true);
+      }
+    };
+
+    checkSubscriptionStatus();
+  }, []);
+
+  if (!isActive) {
+    return <div style={{ width: '100vw', height: '100vh', backgroundColor: 'white' }}></div>;
+  }
+
   return (
     <footer className="footer">
       <div className="footer-top">

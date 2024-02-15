@@ -53,3 +53,59 @@
   padding-left: 10px;
   font-size: 20px;
 }
+
+/* Email Form Container Styles */
+.email-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Style for all form inputs and the textarea */
+.email-form input,
+.email-form textarea {
+  width: 90%; /* Responsive width */
+  padding: 15px;
+  margin-bottom: 15px; /* Space between fields */
+  border: 2px solid #012e55; /* Border color to match theme */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size similar to paragraph text */
+}
+
+/* Specific style for the textarea to adjust height */
+.email-form textarea {
+  height: 150px; /* Fixed height for message input */
+  resize: vertical; /* Allows vertical resizing */
+}
+
+.submit-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #012e55;
+  padding: 15px 35px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 2px solid #012e55;
+  cursor: pointer;
+  text-decoration: none; /* Since it's a button, not a link */
+  display: inline-block; /* To apply padding and dimensions */
+  transition-duration: 0.4s;
+  margin-bottom: 30px;
+}
+
+.submit-btn:hover {
+  background-color: #012e55;
+  color: white;
+  border: 2px solid white;
+}
+
+.success-border {
+  border: 2px solid #28a745; /* Green border for success */
+}
+
+.error-border {
+  border: 2px solid #dc3545; /* Red border for error */
+}

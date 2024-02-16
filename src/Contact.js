@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhoneAlt, faEnvelope, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import office from './kontor_mera.jpg';
 import './Contact.css';
+import Map from './Map';
 
 const Contact = () => {
+  const mapOptions = useMemo(() => ({
+    center: { lat: 56.063033, lng: 12.715362 },
+    zoom: 14,
+  }), []);
+
   const [formData, setFormData] = useState({
     FromEmail: '',
     FromName: '',
@@ -101,6 +107,8 @@ const Contact = () => {
           {submitStatus === 'error' && <span>Ett fel uppstod. Försök igen senare.</span>}
         </div>
       </div>
+
+      <Map options={mapOptions} />
 
       <div className="contact-section">
         <div className="contact-contact">

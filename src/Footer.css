@@ -65,7 +65,7 @@
   margin-top: -10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1224px) {
   .footer-top {
     flex-direction: column;
     align-items: left;

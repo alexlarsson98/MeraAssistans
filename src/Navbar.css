@@ -76,7 +76,7 @@
   color: #012e55; /* Color of the text for the active link */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1224px) {
   .navbar {
     justify-content: space-between; /* Distribute space between logo and links */
     flex-wrap: wrap; /* Allow items to wrap */
@@ -158,7 +158,7 @@
   transition: all 0.3s linear;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1224px) {
   .hamburger {
     display: flex;
   }

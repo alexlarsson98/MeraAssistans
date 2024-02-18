@@ -27,7 +27,7 @@ const Home = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) { // 768px is a common breakpoint for mobile devices
+      if (window.innerWidth < 1024) {
         setCurrentHeaderImage(headerMobile);
       } else {
         setCurrentHeaderImage(header);

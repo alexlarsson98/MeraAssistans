@@ -101,7 +101,7 @@
     max-width: 600px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     .help-how {
       margin-left: 20px;
       margin-right: 20px;

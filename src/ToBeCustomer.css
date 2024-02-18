@@ -61,7 +61,7 @@
     margin-top: 0px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
 
     .image-container-to-be-customer {
       margin-bottom: 250px;

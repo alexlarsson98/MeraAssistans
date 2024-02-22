@@ -2,7 +2,7 @@
   background-color: white;
   color: #012e55;
   padding: 20px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer-top {
@@ -30,8 +30,10 @@
 
 .footer-section p {
   margin-bottom: 10px;
-  font-family: 'Dancing Script', cursive;
-  font-size: x-large;
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  font-weight: bold;
+  margin-top: -10px;
 }
 
 .footer-link {
@@ -61,8 +63,8 @@
   width: 100%;
 }
 
-.footer-section p {
-  margin-top: -10px;
+.footer-contact-parent {
+  padding-top: 25px;
 }
 
 @media (max-width: 1224px) {

@@ -24,17 +24,17 @@
   margin-top: -100px;
 }
 
-.header-content h3 {
-  font-size: 4vw;
-  font-family: 'Dancing Script', cursive;
+.header-content h1 {
+  font-size: 3.2vw;
+  font-family: 'Open Sans', sans-serif;
   padding-left: 150px;
 }
 
 @media (max-width: 1224px) {
-  .header-content h3 {
+  .header-content h1 {
     padding-top: 140px;
     padding-left: 50px;
-    font-size: 6.5vw;
+    font-size: 4.5vw;
   }
 }
 

@@ -67,7 +67,7 @@ const Home = () => {
       <div className="header-container">
       <img src={currentHeaderImage} alt="Header" className="header-image" />
         <div className="header-content">
-          <h3>Personlig assistans för<br></br>personliga människor</h3>
+          <h1>Personlig assistans för<br></br>personliga människor</h1>
           <Link to="/att-bli-kund" className="button-link">Ansök om assistans!</Link>
         </div>
       </div>

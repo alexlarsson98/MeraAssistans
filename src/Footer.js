@@ -38,7 +38,7 @@ const Footer = () => {
           <img src={logo} alt="Company Logo" />
         </div>
         <div className="footer-section">
-          <p>Mera Assistans</p>
+          <p>Mera Assistans | Malmö AB</p>
           <FooterLink to="/">Hem</FooterLink>
           <FooterLink to="/om-oss">Om oss</FooterLink>
           <FooterLink to="/att-vara-kund">Att vara kund</FooterLink>
@@ -47,14 +47,16 @@ const Footer = () => {
           <FooterLink to="/kontakt">Kontakt</FooterLink>
         </div>
         <div className="footer-section">
-          <div className="footer-contact">
-            <FontAwesomeIcon icon={faMapMarkerAlt} /><span>Vasatorpsvägen 1E, 25457 Helsingborg</span>
-          </div>
-          <div className="footer-contact">
-            <FontAwesomeIcon icon={faPhoneAlt} /><span>040-237309</span>
-          </div>
-          <div className="footer-contact">
-            <FontAwesomeIcon icon={faEnvelope} /><span>info@meraassistans.se</span>
+          <div className="footer-contact-parent">
+            <div className="footer-contact">
+              <FontAwesomeIcon icon={faMapMarkerAlt} /><span>Vasatorpsvägen 1E, 25457 Helsingborg</span>
+            </div>
+            <div className="footer-contact">
+              <FontAwesomeIcon icon={faPhoneAlt} /><span>040-237309 | 072-853 88 03</span>
+            </div>
+            <div className="footer-contact">
+              <FontAwesomeIcon icon={faEnvelope} /><span>info@meraassistans.se</span>
+            </div>
           </div>
         </div>
       </div>

@@ -112,7 +112,7 @@ const Contact = () => {
 
       <div className="contact-section">
         <div className="contact-contact">
-          <FontAwesomeIcon icon={faPhoneAlt} size="2x" /><span>040-237309</span>
+          <FontAwesomeIcon icon={faPhoneAlt} size="2x" /><span>040-237309 | 072-853 88 03</span>
         </div>
         <div className="contact-contact">
           <FontAwesomeIcon icon={faEnvelope} size="2x" /><span>info@meraassistans.se</span>

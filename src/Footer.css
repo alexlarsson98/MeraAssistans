@@ -42,6 +42,16 @@
   margin-bottom: 5px;
 }
 
+.footer-section a {
+  color: #012e55;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+  color: blue;
+}
+
 .footer-link:hover {
   color: blue;
 }

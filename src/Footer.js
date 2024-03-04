@@ -58,6 +58,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faEnvelope} /><span>info@meraassistans.se</span>
             </div>
           </div>
+          <a href='https://whistle.qnister.com/mera'><br></br>Visselblåsning</a>
         </div>
       </div>
       <div className="footer-bottom">

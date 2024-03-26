@@ -137,4 +137,32 @@
       font-size: 23px;
     }
   }
+
+  @media (max-width: 428px) {
+
+    .image-container-e {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: -40px;
+    }
+
+    .image-container-e h3 {
+      color: #012e55;
+      position: static;
+      font-size: 50px;
+    }
+
+    .image-container-e p {
+      color: #012e55;
+      position: static;
+      font-size: 25px;
+      margin-left: 10px;
+      margin-top: -35px;
+    }
+
+    .flexis img {
+      margin-left: -40px;
+      width: 380px;
+    }
+  }
   

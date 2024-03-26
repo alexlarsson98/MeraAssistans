@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import header from './mera_header_image.jpg';
 import headerMobile from './mera_header_image_mobile.jpg';
-import hug from './hug_mera.jpg';
+import happyCustomer from './nöjd_kund.jpeg';
 import fountain from './mera_vattenfall - Copy.jpg';
 import './Home.css';
 
@@ -79,7 +79,7 @@ const Home = () => {
           <p>Tycker du att ett bra bemötande, kompetens, helhetsansvar och kvalitet är viktiga aspekter? Då är vi den assistansanordnare du söker.</p>
         </div>
         <div className="image-container">
-          <img src={hug} alt="Hug" />
+          <img src={happyCustomer} alt="Happy customer" />
         </div>
       </div>
       <div className="container">

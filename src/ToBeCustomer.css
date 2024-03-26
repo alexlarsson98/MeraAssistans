@@ -92,3 +92,24 @@
       padding-top: 0px;
     }
   }
+
+  @media (max-width: 428px) {
+
+    .image-container-to-be-customer {
+      margin-bottom: 150px;
+    }
+
+    .image-container-to-be-customer h3 {
+      position: absolute;
+      left: 5%; /* Adjust as needed for center-left alignment */
+      top: 100%;  /* Center vertically */
+      font-size: 50px;
+    }
+    
+    .image-container-to-be-customer p {
+      position: absolute;
+      left: 5%; /* Adjust as needed for center-left alignment */
+      top: 170%;  /* Center vertically */
+      font-size: 25px;
+    }
+  }

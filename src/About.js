@@ -6,7 +6,7 @@ import './About.css';
 const About = () => {
   return (
     <div>
-      <div className="image-container">
+      <div className="image-container-about">
         <img src={hand} alt="hand" className="header-img" />
         <h3>Om oss</h3>
         <p>Vårt huvudintresse är att verka för ett tillgängligt samhälle</p>
@@ -29,7 +29,7 @@ Tycker du att ett bra bemötande, kompetens, helhetsansvar och kvalitet är vikt
             • Regelbunden information om dina rättigheter och naturligtvis all form av administration<br></br><br></br>
             • En personlig kontakt som gör sitt bästa för att du ska få den livskvalitet som du har rätt till</p>
         </div>
-        <div className="image-container">
+        <div className="image-container-about">
           <img src={checklist} alt="checklist" className="header-img" />
         </div>
       </div>

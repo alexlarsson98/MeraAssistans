@@ -5,12 +5,11 @@ import './Career.css';
 const Career = () => {
   return (
     <div>
-      <div className="image-container-e">
+      <div className="image-container-career">
         <img src={hug_full} alt="hug_full" className="header-img" />
         <h3>Jobba hos oss</h3>
         <p style={{ 
-          backgroundImage: 'radial-gradient(circle, rgba(128, 128, 128, 0.5) 30%, transparent 70%)',
-          padding: '5px' }}>Att arbeta som personlig assistent</p>
+           }}>Att arbeta som personlig assistent</p>
       </div>
       <div className="about-container-s">
         <p>I rollen som personlig assistent ingår olika uppgifter som syftar till att den assistansberättigade ska kunna leva ett så självständigt liv som möjligt. Den personliga assistenten har därför som uppdrag att hjälpa brukaren med olika uppgifter i vardagen samt att göra det möjligt för brukaren att delta i de aktiviteter som han eller hon är intresserad av.<br></br><br></br>

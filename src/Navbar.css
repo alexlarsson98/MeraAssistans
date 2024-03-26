@@ -187,3 +187,14 @@
     width: 100%;
   }
 }
+
+@media (max-width: 428px) {
+  .navbar {
+    background-color: white !important; /* Always set to solid white background */
+  }
+
+  .navbar img {
+    left: 20px; /* Adjust the left position for a smaller margin */
+    transform: translateY(-50%); /* Keep vertically centered */
+  }
+}

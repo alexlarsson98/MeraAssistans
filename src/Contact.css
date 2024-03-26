@@ -134,3 +134,10 @@
     margin-right: 0px;
   }
 }
+
+@media (max-width: 428px) {
+
+  .contact-section {
+    max-width: 320px;
+  }
+}

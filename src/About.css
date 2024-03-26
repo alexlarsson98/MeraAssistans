@@ -13,7 +13,7 @@
   color: #012e55;
 }
 
-.image-container {
+.image-container-about {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.image-container h3 {
+.image-container-about h3 {
   position: absolute;
   left: 15%;
   top: 35%;
@@ -30,7 +30,7 @@
   font-size: 70px;
 }
 
-.image-container p {
+.image-container-about p {
   position: absolute;
   left: 15%;
   top: 60%;
@@ -53,7 +53,7 @@
   margin-right: 20px; /* Add some space between text and image */
 }
 
-.about-container-flex .image-container {
+.about-container-flex .image-container-about {
   flex: 1; /* Allow the image container to grow */
   display: flex;
   justify-content: center;
@@ -101,13 +101,13 @@
     padding-top: 30px; /* Adjust top padding if necessary */
   }
 
-  .image-container h3 {
+  .image-container-about h3 {
     margin-top: -10px;
     font-size: 35px; /* Smaller font size */
     left: 10%; /* Adjust left alignment */
   }
 
-  .image-container p {
+  .image-container-about p {
     font-size: 20px; /* Smaller font size */
     left: 10%; /* Adjust left alignment */
   }
@@ -132,5 +132,37 @@
 
   .about-container-flex .text-container .about-container {
     margin-right: 0; /* Reset margin on small screens */
+  }
+}
+
+@media (max-width: 428px) {
+
+  .image-container-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container-about h3, .image-container-about p {
+    position: static; /* Reset positioning to default */
+    color: #012e55; /* Set the text color to blue */
+    left: auto; /* Reset left positioning */
+    top: auto; /* Reset top positioning */
+    transform: none; /* Clear any transformations */
+    font-size: inherit; /* Adjust font size if necessary */
+    padding: 10px 0; /* Add some vertical padding */
+    text-align: center; /* Center align the text */
+  }
+
+  .image-container-about h3 {
+    font-size: 50px;
+  }
+
+  .image-container-about p {
+    font-size: 30px;
+    margin-top: -40px;
+  }
+
+  .image-container-about {
+    text-align: center; /* Ensure text alignment is centered for these elements */
   }
 }

@@ -34,26 +34,53 @@ const Home = () => {
       }
     };
     handleResize();
-  window.addEventListener('resize', handleResize);
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in');
-        } else {
-          entry.target.classList.remove('slide-in');
-        }
-      });
-    }, { threshold: 0.5 });
+  }, []);
 
-    const imageContainers = document.querySelectorAll('.image-container');
-    const textContainers = document.querySelectorAll('.text-container');
-
-    imageContainers.forEach(container => observer.observe(container));
-    textContainers.forEach(container => observer.observe(container));
-
+  useEffect(() => {
+    let observer;
+  
+    const configureObserver = (threshold) => {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+          } else {
+            entry.target.classList.remove('slide-in');
+          }
+        });
+      }, { threshold: threshold });
+    };
+  
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 1024) {
+        setCurrentHeaderImage(headerMobile);
+      } else {
+        setCurrentHeaderImage(header);
+      }
+  
+      if (screenWidth < 428) {
+        configureObserver(0.3);
+      } else {
+        configureObserver(0.5);
+      }
+  
+      const imageContainers = document.querySelectorAll('.image-container');
+      const textContainers = document.querySelectorAll('.text-container');
+  
+      imageContainers.forEach(container => observer.observe(container));
+      textContainers.forEach(container => observer.observe(container));
+    };
+  
+    // Initial setup
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  
+    // Cleanup function
     return () => {
-      imageContainers.forEach(container => observer.unobserve(container));
-      textContainers.forEach(container => observer.unobserve(container));
+      if (observer) {
+        observer.disconnect();
+      }
       window.removeEventListener('resize', handleResize);
     };
   }, []);

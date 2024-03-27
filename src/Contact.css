@@ -140,4 +140,24 @@
   .contact-section {
     max-width: 320px;
   }
+
+  .image-container-contact p {
+    text-align: center;
+  }
+
+  .email-form-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 393px) {
+
+  .image-container-contact h3 {
+    font-size: 50px;
+  }
+
+  .image-container-contact p {
+    font-size: 25px;
+  }
 }

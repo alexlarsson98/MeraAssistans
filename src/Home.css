@@ -221,3 +221,13 @@
     padding: 8px 15px;
   }
 }
+
+@media (max-width: 393px) {
+  .header-container {
+    margin-top: 0px;
+  }
+
+  .header-content .button-link {
+    padding: 8px 12px;
+  }
+}

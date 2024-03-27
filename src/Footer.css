@@ -83,3 +83,10 @@
     align-items: left;
   }
 }
+
+@media (max-width: 428px) {
+  .footer {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
